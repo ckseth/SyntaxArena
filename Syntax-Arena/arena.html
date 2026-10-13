@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntax Slayer | Game Portal</title>
+    <link rel="stylesheet" href="arena.css">
+</head>
+<body>
+
+<header class="game-header">
+    <h1 class="logo">Syntax<span>Slayer</span></h1>
+    <div class="toggle-container">
+        <span id="modeLabel">Light Mode</span>
+        <label class="switch">
+            <input type="checkbox" id="themeToggle">
+            <span class="slider-toggle"></span>
+        </label>
+    </div>
+</header>
+
+<main class="container">
+    <div class="hero-card">
+        <h2>Master the Code Arena</h2>
+        <p>Can you identify the language before the timer runs out?</p>
+
+        <div class="image-slider">
+            <div class="slides">
+                <img id="displayImg" src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800" alt="Game Preview 1">
+            </div>
+            <div class="slider-controls">
+                <button id="prevBtn">❮</button>
+                <button id="nextBtn">❯</button>
+            </div>
+            <p id="caption">Level 1: The Web Wilderness</p>
+        </div>
+
+        <div class="play-zone">
+            <a href="game.html" id="playBtn" class="btn-link">START QUEST</a>
+        </div>
+    </div>
+</main>
+
+<script src="arena.js"></script>
+</body>
+</html>
