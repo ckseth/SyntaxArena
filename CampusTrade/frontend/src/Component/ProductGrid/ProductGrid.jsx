@@ -7,7 +7,7 @@ import ProductCard from '../ProductCard/ProductCard';
 const ProductGrid = ({category, filters}) => {
     const { productList, loading } = useContext(StoreContext);
 
-    // Normalize product data to handle BOTH local assets and DB products
+    // Normalize product data handle BOTH local assets and DB products
     const normalizeProduct = (item) => {
         return {
             _id: item._id,
@@ -27,7 +27,7 @@ const ProductGrid = ({category, filters}) => {
         };
     };
 
-    // Filter logic for categories and search
+    // Filter logic -categories and search
     const filteredList = (productList || [])
         .map(normalizeProduct)
         .filter(item => {
