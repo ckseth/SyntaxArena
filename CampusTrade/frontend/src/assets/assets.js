@@ -5,20 +5,17 @@ import mouse_1 from './Mouse_1.jpeg'
 import mouse_2 from './Mouse_2.jpeg'
 import electric_6 from './electric_6.png'
 
-// ── Books ──
 import textbook_1 from './TextBook_1.jpeg'
 import textbook_2 from './TextBook_2.jpeg'
 import textbook_3 from './TextBook_3.jpeg'
 import textbook_4 from './TextBook_4.jpeg'
 
-// ── Furniture ──
 import furniture_1 from './furniture_1.png'
 import furniture_2 from './furniture_2.jpg'
 import furniture_3 from './furniture_3.png'
 import furniture_4 from './furniture_4.png'
 import furniture_5 from './furniture_5.png'
 
-// ── Vehicles ──
 import vehicle_1 from './vehicle_1.png'
 import vehicle_2 from './vehicle_2.png'
 import vehicle_3 from './vehicle_3.png'
