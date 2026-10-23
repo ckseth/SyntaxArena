@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0;
 
     function updateSlide(index) {
-        // Simple fade effect
+        
         displayImg.style.opacity = 0;
         setTimeout(() => {
             displayImg.src = slides[index].src;
