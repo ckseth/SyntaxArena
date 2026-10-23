@@ -1,0 +1,186 @@
+/* --- Root Variables & Reset --- */
+:root {
+  --primary: #cdf0f7;
+  --accent: #865a85;
+  --bg-light: #e8ffe7;
+  --card-light: #ffffff;
+  --text-light: #333;
+  --bg-dark: #2e2331;
+  --card-dark: rgb(87, 87, 87);
+  --text-dark: #f8f8f8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  transition:
+    background 0.4s,
+    color 0.4s;
+  min-height: 100vh;
+}
+
+/* --- Header & Toggle --- */
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.switch {
+  position: relative;
+  width: 50px;
+  height: 24px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider-toggle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+.slider-toggle:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3px;
+  background: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+input:checked + .slider-toggle {
+  background-color: var(--accent);
+}
+input:checked + .slider-toggle:before {
+  transform: translateX(24px);
+}
+
+/* --- Container & Hero Card --- */
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.hero-card {
+  background: var(--card-light);
+  max-width: 800px;
+  width: 100%;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(41, 41, 41, 0.1);
+  text-align: center;
+}
+
+/* --- Image Slider Styling --- */
+.image-slider {
+  position: relative;
+  margin: 10px 0;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+#displayImg {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.slider-controls button {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.slider-controls button:hover {
+  background: var(--accent);
+}
+
+#caption {
+  margin-top: 5px;
+  font-style: italic;
+  color: #666;
+}
+
+/* --- Interactive Play Button --- */
+#playBtn {
+  background: var(--accent);
+  color: white;
+  padding: 12px 40px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(106, 27, 154, 0.4);
+  transition: 0.3s;
+}
+
+/* --- Dark Theme Overrides --- */
+body.dark-theme {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+.dark-theme .hero-card {
+  background-color: var(--card-dark);
+  box-shadow: 0 15px 35px rgba(46, 46, 46, 0.5);
+}
+.dark-theme #caption {
+  color: #aaa;
+}
+
+.btn-link {
+    display: inline-block;
+    color: white;
+    text-decoration: none; /* Removes the underline */
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-link:hover {
+    background-color: #b396b3;
+}

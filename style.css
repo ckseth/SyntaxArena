@@ -1,0 +1,193 @@
+:root {
+  /* Modern Vibrant Palette */
+  --primary-modern: #3b82f6; /* Electric Blue */
+  --accent-modern: #6366f1; /* Indigo Glow */
+  --bg-light: #f1f5f9; /* Clean Professional Light Gray */
+  --card-light: #ffffff;
+  --text-dark: #1e293b;
+  --bg-dark: #0f172a;
+  --card-dark: #1e293b;
+  /* Realistic Floating Shadow */
+  --modern-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--bg-light);
+  transition: 0.3s;
+  padding: 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.apply_box {
+  max-width: 800px;
+  padding: 40px;
+  background: var(--card-light);
+  margin: 20px auto;
+  border-radius: 15px;
+  /* Realistic shadow for depth */
+  box-shadow: var(--modern-shadow);
+}
+
+.header_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 15px;
+}
+
+/* Header Text with Modern Gradient */
+.header_flex h1 {
+  background: linear-gradient(
+    to right,
+    var(--primary-modern),
+    var(--accent-modern)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+/* Original Toggle Style */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cbd5e1;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3px;
+  background: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: var(--primary-modern);
+}
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+/* Original Grid System */
+.form_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+.form_control {
+  display: flex;
+  flex-direction: column;
+}
+.textarea_control {
+  grid-column: span 2;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #475569;
+  margin-bottom: 5px;
+}
+
+/* Realistic Inputs */
+input,
+select,
+textarea {
+  padding: 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+  background-color: #f8fafc;
+}
+
+input:focus {
+  border-color: var(--primary-modern);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+/* Original Button Position with Modern Color */
+.button_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+button {
+  background: linear-gradient(
+    135deg,
+    var(--primary-modern),
+    var(--accent-modern)
+  );
+  color: white;
+  border: none;
+  padding: 15px 50px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3);
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.4);
+}
+
+/* Dark Theme Overrides */
+body.dark-theme {
+  background-color: var(--bg-dark);
+  color: #f1f5f9;
+}
+.dark-theme .apply_box {
+  background-color: var(--card-dark);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+.dark-theme label {
+  color: #94a3b8;
+}
+.dark-theme input,
+.dark-theme select,
+.dark-theme textarea {
+  background-color: #0f172a;
+  border: 2px solid #334155;
+  color: white;
+}

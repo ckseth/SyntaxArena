@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntax Slayer | The Arena</title>
+    <link rel="stylesheet" href="gamestyle.css">
+</head>
+<body>
+
+<header class="game-header">
+    <h1 class="logo">Syntax<span>Arena</span></h1>
+    <div class="score-display">Score: <span id="currentScore">0</span></div>
+</header>
+
+<main class="container">
+    <div class="hero-card">
+        <h2>Level: <span id="levelName">Web Wilderness</span></h2>
+        
+        <div class="code-terminal" id="terminal">
+            <pre><code id="codeSnippet">// Loading Challenge...</code></pre>
+        </div>
+
+        <p>Identify the language of the snippet above:</p>
+        
+        <div class="options-grid" id="optionsGrid" style="margin-top: 20px;">
+            </div>
+
+        <p id="gameFeedback" style="margin-top: 20px; font-weight: bold; height: 20px;"></p>
+        
+        <div style="margin-top: 30px;">
+            <button id="backBtn" class="game-btn" onclick="window.location.href='index.html'">Exit Arena</button>
+    </div>
+</main>
+
+<script src="game.js"></script>
+</body>
+</html>

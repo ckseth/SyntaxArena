@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="apply_box">
+        <div class="header_flex">
+          <h1 class="pract">Game Registration</h1>
+          <div class="toggle-container">
+            <span id="modeLabel">Light</span>
+            <label class="switch">
+              <input type="checkbox" id="themeToggle" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+
+        <form id="registrationForm">
+          <div class="form_container">
+            <div class="form_control">
+              <label>Full Name</label>
+              <input type="text" id="username" required />
+            </div>
+
+            <div class="form_control">
+              <label>Gamer Username</label>
+              <input type="text" id="uname" placeholder="player@123" required />
+            </div>
+
+            <div class="form_control">
+              <label>Email</label>
+              <input type="email" id="email" required />
+            </div>
+
+            <div class="form_control">
+              <label>Phone Number</label>
+              <input type="number" id="pno" required />
+            </div>
+
+            <div class="form_control">
+              <label>Gender</label>
+              <div class="gender-group">
+                <input type="radio" name="gender" required /> Male
+                <input type="radio" name="gender" required /> Female
+                <input type="radio" name="gender" required /> Other
+              </div>
+            </div>
+
+            <div class="form_control">
+              <label>Date of Birth</label>
+              <input type="date" id="dob" required />
+            </div>
+
+            <div class="form_control">
+              <label>Game Difficulty</label>
+              <select id="difficulty" required>
+                <option value="">Select Level</option>
+                <option>Easy</option>
+                <option>Medium</option>
+                <option>Hard</option>
+              </select>
+            </div>
+
+            <div class="form_control">
+              <label>Character</label>
+              <select id="character" required>
+                <option value="">Choose Character</option>
+                <option>Warrior</option>
+                <option>Mage</option>
+                <option>Sniper</option>
+                <option>Explorer</option>
+              </select>
+            </div>
+
+            <div class="form_control">
+              <label>Sound</label>
+              <div class="gender-group">
+                <input type="radio" name="sound" required /> On
+                <input type="radio" name="sound" required /> Off
+              </div>
+            </div>
+
+            <div class="form_control">
+              <label>Password</label>
+              <input type="password" id="password" required />
+            </div>
+
+            <div class="form_control">
+              <label>Confirm Password</label>
+              <input type="password" id="confirmPassword" required />
+            </div>
+          </div>
+
+          <div class="button_container">
+            <button
+              type="submit"
+              id="submitBtn"
+              onclick="window.location.href = 'arena.html'"
+            >
+              Register Now
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
