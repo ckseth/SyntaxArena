@@ -23,7 +23,7 @@ body {
   overflow: hidden; /* Screen se bahar nahi jayega */
 }
 
-/* --- Header (Compact) --- */
+// header
 .game-header {
   display: flex;
   justify-content: space-between;
